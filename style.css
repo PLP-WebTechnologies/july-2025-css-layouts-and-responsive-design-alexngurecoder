@@ -1,16 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   margin: 0;
-}
-
-/* Header */
-header {
-  background: lightcoral;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navigation (Flexbox) */
@@ -26,7 +21,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -36,6 +31,10 @@ nav a:hover {
 }
 
 /* Main Content (Grid) */
+main {
+  flex: 1; /* makes footer stay at bottom */
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto; /* start with single column */
@@ -53,23 +52,22 @@ section {
 
 /* Footer */
 footer {
-  background: lightgray;
+  background: lightseagreen;
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
 /* Responsive Layout */
 @media (min-width: 600px) {
   .grid-container {
-    grid-template-columns: auto auto; /* two columns */
+    grid-template-columns: auto auto;
   }
 }
 
 @media (min-width: 900px) {
   .grid-container {
-    grid-template-columns: auto auto auto; /* three columns */
+    grid-template-columns: auto auto auto;
   }
 }
